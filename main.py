@@ -1,5 +1,4 @@
 import streamlit as st
-from recommender import *
 
 import pandas as pd
 import pickle
