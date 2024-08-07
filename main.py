@@ -81,10 +81,10 @@ def recommendations(artist, name):
     data_same_cluster_seed_song["distance"] = same_cluster_songs_distances
 
     recommendation_dicts = (
-        data_same_cluster_seed_song.sort_values(by="distance", ascending=False)[
+        data_same_cluster_seed_song.sort_values(by="distance", ascending=True)[
             ["artists", "name", "year", "id"]
         ]
-        .head(10)
+        .iloc[1:11]
         .to_dict(orient="records")
     )
 
